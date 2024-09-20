@@ -14,9 +14,11 @@
 
 :root {
   --color-primary: #00bfa5;
-  --color-headings: #000;
+  --color-text: #37474f;
+  --color-error: #e61236;
   --color-white: #fff;
   --color-body: #f5f5f5;
+  --color-gray: #9b9b9b;
   --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
@@ -51,7 +53,7 @@ body {
 }
 
 .navbar-link {
-  color: #37474f;
+  color: var(--color-text);
   text-decoration: none;
 }
 
@@ -77,14 +79,14 @@ body {
 }
 .title {
   font-size: 16px;
-  color: #37474f;
+  color: var(--color-text);
   margin-right: 10px;
 }
 form {
   width: 400px;
   margin: 0 12px;
   padding: 30px;
-  background-color: #fff;
+  background-color: var(--color-white);
   box-shadow: var(--box-shadow);
   border-radius: 8px;
   margin-bottom: 100px;
@@ -93,7 +95,7 @@ form {
 
 form h3 {
   text-align: right;
-  color: #37474f;
+  color: var(--color-text);
   margin-bottom: 30px;
   font-size: 16px;
   font-weight: 700;
@@ -138,7 +140,7 @@ label {
   display: block;
   margin-bottom: 8px;
   font-size: 14px;
-  color: #37474f;
+  color: var(--color-text);
 }
 
 input,
@@ -154,7 +156,7 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: #20a39e;
+  border-color: var(--color-primary);
 }
 
 input::placeholder,
@@ -166,22 +168,22 @@ textarea::placeholder {
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: #20a39e;
+  border-color: var(--color-primary);
 }
 
 .error {
-  color: #e61236;
+  color: var(--color-error);
   font-size: 12px;
   margin-top: 5px;
 }
 
 .input-error {
-  border: 1px solid #e61236;
+  border: 1px solid var(--color-error);
 }
 
 button[type='submit'] {
-  background-color: #20a39e;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   padding: 10px 20px;
   font-size: 16px;
   border: none;
@@ -191,7 +193,7 @@ button[type='submit'] {
 }
 
 button[type='submit']:hover {
-  background-color: #178f7e;
+  background-color: var(--color-primary);
 }
 .input-container {
   position: relative;
@@ -271,7 +273,7 @@ button[type='submit']:hover {
 .header {
   text-align: right;
   margin-bottom: 16px;
-  color: #37474f;
+  color: var(--color-text);
   font-size: 16px;
   font-weight: 400;
 }
@@ -305,16 +307,17 @@ button[type='submit']:hover {
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  margin-bottom: 10px;
 }
 .content__text .title {
-  color: #9b9b9b;
+  color: var(--color-gray);
   font-size: 14px;
   font-weight: 400;
 }
 .content__text .text {
   font-size: 16px;
   font-weight: 700;
-  color: #37474f;
+  color: var(--color-text);
 }
 .card-title {
   font-size: 1.125rem;
@@ -329,7 +332,11 @@ button[type='submit']:hover {
 .card-region {
   margin-top: 6px;
 }
-
+.content__line {
+  display: block;
+  margin: 10px 0;
+  color: var(--color-gray);
+}
 @media (min-width: 600px) {
   .information-container {
     padding: 20px;
@@ -343,7 +350,9 @@ button[type='submit']:hover {
   .card {
     margin-bottom: 16px;
   }
-
+  .content__line {
+    display: none;
+  }
   .card__content {
     padding: 16px;
     display: grid;
@@ -354,6 +363,7 @@ button[type='submit']:hover {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 0px;
   }
   .card-title {
     font-size: 1.25rem;
@@ -369,6 +379,10 @@ button[type='submit']:hover {
 }
 .loading {
   color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 /* Footer styles */
 .footer-button {
@@ -387,8 +401,8 @@ button[type='submit']:hover {
 }
 
 button {
-  background-color: #00c4b3;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   padding: 12px;
   border: none;
   width: 224px;
@@ -400,7 +414,7 @@ button {
 }
 
 button:hover {
-  background-color: #009e8d;
+  background-color: var(--color-primary);
 }
 
 button:disabled {
@@ -432,7 +446,7 @@ button:disabled {
   margin-top: 150px;
 }
 .confirmation-container h3 {
-  color: #37474f;
+  color: var(--color-text);
   font-size: 14px;
   font-weight: 700;
   margin-top: 15px;
@@ -453,7 +467,7 @@ button:disabled {
   padding-right: 1rem;
   z-index: 1000;
   gap: 1rem;
-  color: #37474f;
+  color: var(--color-text);
 }
 .map-back-button {
   display: none;
@@ -473,7 +487,7 @@ button:disabled {
     gap: 1rem;
     cursor: pointer;
     margin-bottom: 1rem;
-    color: #37474f;
+    color: var(--color-text);
   }
   .map-title {
     background-color: var(--color-white);

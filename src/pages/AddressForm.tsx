@@ -8,7 +8,7 @@ type FormData = {
   coordinate_mobile: string;
   coordinate_phone_number?: string;
   address: string;
-  gender: string;
+  gender: 'آقا' | 'خانم';
 };
 
 const ClearableInput = ({ field, error }) => {

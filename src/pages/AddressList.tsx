@@ -45,6 +45,7 @@ const AddressList = () => {
     return (
       <div className="loading">
         <Loading />
+        کمی صبر کنید .
       </div>
     );
   }
@@ -94,7 +95,7 @@ const AddressList = () => {
                   <span className="title">جنسیت</span>
                   <span className="text">{address.gender || '-'}</span>
                 </div>
-
+                <hr className='content__line'/>
                 <div className="content__text">
                   <span className="title">آدرس</span>
                   <span className="text">{address.address}</span>
